@@ -41,7 +41,14 @@ const Register = () => {
 
     const validate = () => {
         const newError = {}
-        if (!inputRegister.name) newError.name = "username is require"
+        if (!inputRegister.name) {
+            newError.name = "username is require"
+        }else if (!/^[A-Za-z\s]+$/.test(inputRegister.name)) {
+        // sirf alphabets aur spaces allow hain
+        newError.name = "Name should only contain letters and spaces";
+    }
+
+
         if (!inputRegister.email) {
             newError.email = "email is require"
         } else if (!/\S+@\S+\.\S+/.test(inputRegister.email)) {
