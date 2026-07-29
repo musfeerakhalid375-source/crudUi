@@ -13,31 +13,32 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
-  <Route path='/home' element={<Navigate to="/Home" />} />
+        <Route path='/' element={<Navigate to="/login" />} />
+        <Route path='/home' element={<Home/>} />  
 
-  <Route path='/register' element={<Register/>} />
-  <Route path='/login' element={<Login/>} />
+        <Route path='/register' element={<Register/>} />
+        <Route path='/login' element={<Login/>} />
 
-  <Route
-    path='/users'
-    element={
-      <ProtectedRoute>
-        <ContactApp/>
-      </ProtectedRoute>
-    }
-  />
+        <Route
+          path='/users'
+          element={
+            <ProtectedRoute>
+              <ContactApp/>
+            </ProtectedRoute>
+          }
+        />
 
-  <Route
-    path='/register/:id'
-    element={
-      <ProtectedRoute>
-        <Register/>
-      </ProtectedRoute>
-    }
-  />
+        <Route
+          path='/register/:id'
+          element={
+            <ProtectedRoute>
+              <Register/>
+            </ProtectedRoute>
+          }
+        />
 
-  <Route path='*' element={<h1>Page Not Found</h1>} />
-</Routes>
+        <Route path='*' element={<h1>Page Not Found</h1>} />
+      </Routes>
     </div>
   )
 }
