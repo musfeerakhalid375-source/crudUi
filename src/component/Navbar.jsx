@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const handleLogout = () => {
+    localStorage.removeItem("user")
+    navigate("/login")
+}
     return (
         <div>
            <nav className="bg-white shadow-md px-8 py-4 flex justify-between items-center">
@@ -21,6 +25,9 @@ const Navbar = () => {
 
     <button onClick={()=>navigate('/login')} className="bg-green-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-green-700 transition duration-300">
       Login
+    </button>
+    <button onClick={handleLogout} className="bg-green-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-green-700 transition duration-300">
+      logOut
     </button>
   </div>
 </nav>

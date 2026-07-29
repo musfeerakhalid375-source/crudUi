@@ -20,3 +20,7 @@ export const deleteUser = (id) => {
   return api.delete(`/delete/${id}`);
 };
 
+export const loginUser = (loginData) => {
+  return api.post("/login", loginData);
+};
+
