@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { registerUser, updateUser, getUsers, getUserById } from '../api/authApi';
 
 const Register = () => {
@@ -227,9 +227,9 @@ const Register = () => {
                     {/* Login Link */}
                     <p className='text-center text-sm text-gray-500 pt-2'>
                         Already have an account?{" "}
-                        <a href="/login" className='text-indigo-600 font-medium hover:underline'>
+                        <Link href="/login" className='text-indigo-600 font-medium hover:underline'>
                             Login here
-                        </a>
+                        </Link>
                     </p>
                 </form>
             </div>
