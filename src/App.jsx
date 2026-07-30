@@ -7,15 +7,15 @@ import Login from './component/Login'
 import ContactApp from './component/ContactApp'
 import Home from './component/Home'
 import ProtectedRoute from './routes/ProtectedRoutes'
+import Profile from './component/Profile'
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Navigate to="/login" />} />
-        <Route path='/home' element={<Home/>} />  
-
+<Route path='/' element={<Home/>} /> 
+        <Route path='/Profile' element={<Profile/>} />  
         <Route path='/register' element={<Register/>} />
         <Route path='/login' element={<Login/>} />
 

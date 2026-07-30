@@ -1,3 +1,13 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+td{
+    text-transform: capitalize;
+}
+th{
+    text-transform: capitalize;
+}
