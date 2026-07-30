@@ -14,16 +14,16 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
-<Route path='/' element={<Home/>} /> 
-        <Route path='/profile' element={<Profile/>} />  
-        <Route path='/register' element={<Register/>} />
-        <Route path='/login' element={<Login/>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
 
         <Route
           path='/users'
           element={
             <ProtectedRoute>
-              <ContactApp/>
+              <ContactApp />
             </ProtectedRoute>
           }
         />
@@ -32,7 +32,7 @@ const App = () => {
           path='/register/:id'
           element={
             <ProtectedRoute>
-              <Register/>
+              <Register />
             </ProtectedRoute>
           }
         />
