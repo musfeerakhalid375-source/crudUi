@@ -35,7 +35,7 @@ const Navbar = () => {
 
                 {/* Logo */}
                 <h1
-                    onClick={() => navigate(user ? (user.role === 'admin' ? '/users' : '/home') : '/')}
+                    onClick={() => navigate(user ? (user.role === 'admin' ? '/users' : '/profile') : '/')}
                     className="text-xl sm:text-2xl font-bold text-indigo-600 cursor-pointer flex items-center gap-2"
                 >
                     <span className="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 text-white flex items-center justify-center shadow-md shadow-indigo-200">
