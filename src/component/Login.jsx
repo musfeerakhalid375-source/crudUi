@@ -146,7 +146,7 @@ const Login = () => {
                     {/* Register Link */}
                     <p className='text-center text-sm text-gray-500 pt-2'>
                         Don't have an account?{" "}
-                        <a href="/register" className='text-indigo-600 font-medium hover:underline'>
+                        <a onClick={()=>navigate("/register")} className='text-indigo-600 font-medium hover:underline'>
                             Register here
                         </a>
                     </p>
